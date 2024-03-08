@@ -1,9 +1,9 @@
 {
     "mysql_host": "",
-    "mysql_user": "",
-    "mysql_pwd": "",
-    "mysql_port": "",
-    "mysql_db": "",
+    "mysql_user": "root",
+    "mysql_pwd": "root",
+    "mysql_port": "3307",
+    "mysql_db": "myess",
     "wecom_webhook_key": "",
     "wecom_at_phone": "",
     "send_qqEmail": "",

@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  ess-client:
+    build: ./client
+    command: node ./server.js
+    ports:
+      - "5173:5173"
+    restart: always
+    volumes:
+      - ./client:/app/client
+    container_name: ess_client_vue
+
+  ess-server:
+    build: ./server
+    command: python manage.py runserver 0.0.0.0:8088
+    volumes:
+      - ./server:/app/server
+    ports:
+      - "8088:8088"
+    restart: always
+    container_name: ess_server_django
+    depends_on:
+      - ess-db
+  ess-db:
+    image: mysql:latest
+    container_name: ess_db_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=myess
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf:/etc/mysql/conf.d
+    restart: always
