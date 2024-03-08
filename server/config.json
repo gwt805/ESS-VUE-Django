@@ -1,0 +1,22 @@
+{
+    "mysql_host": "",
+    "mysql_user": "",
+    "mysql_pwd": "",
+    "mysql_port": "",
+    "mysql_db": "",
+    "wecom_webhook_key": "",
+    "wecom_at_phone": "",
+    "send_qqEmail": "",
+    "send_qqEmail_pwd": "",
+    "enable_local_echarts": true, 
+    "kafka_topic": "",
+    "kafka_user": "",
+    "kafka_pwd": "",
+    "kafka_server": "",
+    "kafka_group_id": "",
+    "ldap_host": "",
+    "ldap_port": 0,
+    "ldap_admin_user": "",
+    "ldap_admin_password": "",
+    "ldap_base_search": ""
+}
