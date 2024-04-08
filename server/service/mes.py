@@ -299,6 +299,11 @@ def gs_data_add(uname, pname, waibao, task_id, dtime, kinds, pnums, knums, ptime
             msg = "任务ID不能为空 !"
             return status, msg
         new_task.tstask_id = int(task_id)
+    elif kinds == "筛选":
+        if task_id == "":
+            new_task.tstask_id = None
+        else:
+            new_task.tstask_id = int(task_id)
     new_task.save()
     status = "success"
     msg = "添加成功 !"
